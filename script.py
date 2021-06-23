@@ -3,7 +3,7 @@ from product_item import ProductItem
 # Membuat daftar komoditas dan harganya
 product_item1 = ProductItem('Beras Rojolele 5 kg', 56_000)
 product_item2 = ProductItem('Gulaku 1 kg', 13_000)
-product_item3 = ProductItem('Terigu MIla 1 kg', 11_000)
+product_item3 = ProductItem('Terigu Mila 1 kg', 11_000)
 product_item4 = ProductItem('Minyak Goreng Filma 1 ltr', 18_000)
 
 product_items = [product_item1, product_item2, product_item3, product_item4]
