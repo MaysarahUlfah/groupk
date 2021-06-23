@@ -16,7 +16,7 @@ Berikut daftar harga sembako hari ini:
 
 print('--------------------')
 # Menampilkan komoditas dan harganya
-index = 0
+index = 1
 
 for product_item in product_items:
     print(str(index) + '. ' + product_item.info())
@@ -24,16 +24,21 @@ for product_item in product_items:
 print('--------------------')
 
 # Memulai interaksi dengan user
-order = int(input('Mau pesan yang mana? (masukan nomor): '))
-selected_product = product_items[order]
-print('Item yang di pilih: ' + selected_product.name)
+
+try:
+    order = int(input('Mau pesan yang mana? (masukan nomor): '))
+    selected_product = product_items[order-1]
+    print('Item yang di pilih: ' + selected_product.name)
 
 # Terima input dari console, dan Berikan input ke variable count
-count = int(input('Mau berapa banyak?: '))
+    count = int(input('Mau berapa banyak?: '))
 
 # Panggil method get_total_price 
-result = selected_product.get_total_price(count)
+    result = selected_product.get_total_price(count)
 
 # Cetak 'Total harga adalah $____'
-print('Total harganya adalah Rp ' + str(result))
-print('Pesanan akan segera di kirim, terima kasih telah berbelanja')
+    print('Total harganya adalah Rp ' + str(result))
+    print('Pesanan akan segera di kirim, terima kasih telah berbelanja')
+
+except:
+    print('Nomor yang Anda masukan tidak ada di daftar')
